@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-^p9)-vegqjf7$85sxmeeienih9hu+umppgfq9@1=%%&xez(aac
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['mysite.com', 'localhost', '127.0.0.1']
 
 
 # Application definition
@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'social_django',
+    'django_extensions',
     'django.contrib.admin',
 ]
 
@@ -92,6 +94,7 @@ DATABASES = {
 AUTHENTICATION_BACKENDS = [
  'django.contrib.auth.backends.ModelBackend',
  'account.authentication.EmailAuthBackend',
+ 'social_core.backends.google.GoogleOAuth2',
 ]
 
 # Password validation
@@ -150,3 +153,7 @@ EMAIL_HOST_USER = 'afzaloripov007@gmail.com'
 EMAIL_HOST_PASSWORD = 'vuym diwz ejjc pmeb'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
+
+
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '614667053447-ltdclrh9obek21fdjhec7qjrqmu8qg9s.apps.googleusercontent.com' # ИД клиента Google
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = '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' # Секрет клиента Google
