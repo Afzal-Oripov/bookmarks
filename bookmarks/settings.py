@@ -144,16 +144,15 @@ LOGIN_REDIRECT_URL = 'dashboard'
 LOGIN_URL = 'login'
 LOGOUT_URL = 'logout'
 
+from ton import *
+
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'afzaloripov007@gmail.com'
-EMAIL_HOST_PASSWORD = 'vuym diwz ejjc pmeb'
+EMAIL_HOST_USER = email
+EMAIL_HOST_PASSWORD = pasword
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 
-
-SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '614667053447-ltdclrh9obek21fdjhec7qjrqmu8qg9s.apps.googleusercontent.com' # ИД клиента Google
-SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = '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' # Секрет клиента Google
