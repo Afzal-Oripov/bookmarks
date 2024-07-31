@@ -94,7 +94,7 @@ DATABASES = {
 AUTHENTICATION_BACKENDS = [
  'django.contrib.auth.backends.ModelBackend',
  'account.authentication.EmailAuthBackend',
-#  'social_core.backends.google.GoogleOAuth2',
+ 'social_core.backends.google.GoogleOAuth2',
 ]
 
 # Password validation
@@ -157,5 +157,5 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 
 
-# SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = key # ИД клиента Google
-# SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = secret # Секрет клиента Google
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '614667053447-ltdclrh9obek21fdjhec7qjrqmu8qg9s.apps.googleusercontent.com' # ИД клиента Google
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET =  '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' # Секрет клиента Google
